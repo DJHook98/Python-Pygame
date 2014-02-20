@@ -8,7 +8,7 @@ from pygame.locals import *
 pygame.init()
 
 # Game window
-DISPLAYSURF = pygame.display.set_mode((640, 470), 0, 32)
+DISPLAYSURF = pygame.display.set_mode((640, 480), 0, 32)
 
 # Load images
 ball_load = pygame.image.load("ball_01.png")
