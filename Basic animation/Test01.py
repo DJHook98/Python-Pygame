@@ -6,7 +6,7 @@ from pygame.locals import *
 
 # Activate pygame
 pygame.init()
-pygame.display.set_caption("Basic Animation Test 01")
+pygame.display.set_caption("Basic Animation Test")
 
 # Game window
 DISPLAYSURF = pygame.display.set_mode((640, 480), 0, 32)
