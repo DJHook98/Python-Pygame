@@ -24,20 +24,22 @@ ball_2 = ball_2_load.convert_alpha()
 ball_2_x = ball_2.get_width()
 ball_2_y = (DISPLAYSURF.get_height() / 4) * 2.5
 
-
 #Variables
 COLOR = (0, 0, 0)
 x = 0
 x_2 = 640 - ball_2_x
 clock = pygame.time.Clock()
 
-while True:
-    clock.tick(30) #The game runs at 30 ticks per second
-
-    for event in pygame.event.get():
+# Events function
+def input_events(events):
+    for event in events:
         if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
             pygame.quit()
             os._exit(0)
+
+while True:
+    clock.tick(30) #The game runs at 30 ticks per second
+    input_events(pygame.event.get())
 
     DISPLAYSURF.fill(COLOR)
     DISPLAYSURF.blit(ball, (x, ball_y))
